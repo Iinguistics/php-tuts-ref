@@ -90,7 +90,47 @@ $low = "The score is below 50 low score";
 	// writing to a file
 	// fwrite($handle, "\nType in whatever you want.");
 
-	// fclose($file);
+    // fclose($file);
+    
+    // classes
+    class User {
+        // public..so you can access var outside of the class
+        // private..so they cant be accessed without using getters/setters
+        private $email;
+        private $name;
+
+        // php constructor
+        public function __construct($name, $email){
+            $this->name = $name;
+            $this->email = $email;
+        }
+
+        public function login(){
+            echo 'the user '. $this->name . ' is logged in <br /> email:' . $this->email;
+        }
+         
+        // getter
+        public function getName(){
+            return $this->name;
+        }
+        
+        //setter
+        public function setName($name){
+            if(is_string($name) && strlen($name) > 2){
+             $this->name = $name;
+             echo " name has been updated to $name";
+            }else{
+                return 'not a valid name'
+            }
+        }
+
+    
+    }
+
+    $userOne = new User('Mario', 'mario@gmail.com');
+    $userOne->login();
+   // $userOne->name;
+   $userOne->setName('James');
 
 ?>
 
