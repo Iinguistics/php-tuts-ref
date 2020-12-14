@@ -4,6 +4,17 @@
 session_start();
 $name = $_SESSION['name'];
 
+//unset session, use unset method, then pass in your session
+//unset($_SESSION['name']);
+
+// Null Coalescing..if var already exists you can set name to new value using this
+//$name = $_SESSION['name'] ?? 'Guest';
+
+
+// get cookie  if gender not set fallback is unknown  ?? is basically or ||
+$gender = $_COOKIE['gender'] ?? 'Unknown';
+
+
 ?>
 
 
@@ -30,7 +41,10 @@ $name = $_SESSION['name'];
           <a class="nav-link text-white" href="#">Pricing</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link text-white" href="#"><?php echo $name; ?></a>  
+        <a class="nav-link text-white" href="#"><?php echo htmlspecialchars($name); ?></a>  
+        </li>
+        <li class="nav-item">
+        <a class="nav-link text-white" href="#"><?php echo htmlspecialchars($gender); ?></a>  
         </li>
       </ul>
     </div>
