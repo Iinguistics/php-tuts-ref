@@ -41,9 +41,33 @@ $low = "The score is below 50 low score";
  //session_unset();
  
 
+// file system
+  // readfile just captures the entire file, echo it out basically acts just as cat in linux
+// $add = readfile('add.php');
+// echo $add;
 
+// file_exists just returns a boolean
+//  $file = 'add.php';
+//  if(file_exists($file)){
+//      echo readfile($file);
+//  }else{
+//      echo 'file does not exist';
+//  }
 
+// copy file  takes in file you want to copy, then what you want to name it.
+//copy($file, 'add-2.php');
 
+// absolute path  show exact path of file
+ //echo realpath($file)
+
+ // file size
+  // echo filesize($file);
+
+  //rename file  takes in file you want to rename, then what you want to rename it.
+  // rename($file, 'added.php');
+
+  // make directory  just like in linux
+  //mkdir('whatever');
 
 
 ?>
