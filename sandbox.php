@@ -120,7 +120,7 @@ $low = "The score is below 50 low score";
              $this->name = $name;
              echo " name has been updated to $name";
             }else{
-                return 'not a valid name'
+                return 'not a valid name';
             }
         }
 
