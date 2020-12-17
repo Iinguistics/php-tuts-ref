@@ -1,6 +1,5 @@
 <?php 
 
-// to connect SQL db in laravel & using xampp make sure this extension is in your php.ini config file extension=php_pdo_mysql.dll
 
 //this would be const , cant overide var
 define('NAME', 'Mario');
