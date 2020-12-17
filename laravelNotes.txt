@@ -3,3 +3,13 @@ to connect SQL db in laravel & using xampp make sure this extension is in your p
 -to make a new controller. in terminal you can run php aritisan make:controller nameOfMyController
  automatically get created in your http/controllers directory
   if you want it in a subdirectory, php aritisan make:controller MyParentDirectory\\nameOfMyController
+
+Define your routes in web.php  Route::get  then bring in your controller, & the function name.
+to import your controller in the web.php file:  use path\of\controller\NameOfControllerFile
+use is the keyword instead of import 
+
+
+<a href="{{ route('register') }}" class="p-3">Register</a> 
+instead of href="/register"
+so in your web.php register route you can chain on a name to the route. this one is called register.
+Route::get('/register', [RegisterController::class, 'index'])->name('register');
