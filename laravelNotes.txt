@@ -13,3 +13,12 @@ use is the keyword instead of import
 instead of href="/register"
 so in your web.php register route you can chain on a name to the route. this one is called register.
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
+
+
+database models:
+to create a new db schema you can run php artisan make:model whateveryouwantthenametobe
+to create it with a migration & factory php artisan make:model whateveryouwantthenametobe -m -f
+
+then go to your new schema located under database/migrations/
+then add whatever you want in the table blueprint for example $table->text('body'); creates a column/section called body that will except text...
+then run php artisan migrate
