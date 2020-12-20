@@ -15,6 +15,9 @@ so in your web.php register route you can chain on a name to the route. this one
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 
 
+to create a migration:
+php artisan make:migration create_likes_table --create=likes
+
 database models:
 to create a new db schema you can run php artisan make:model whateveryouwantthenametobe
 to create it with a migration & factory php artisan make:model whateveryouwantthenametobe -m -f
