@@ -22,3 +22,10 @@ to create it with a migration & factory php artisan make:model whateveryouwantth
 then go to your new schema located under database/migrations/
 then add whatever you want in the table blueprint for example $table->text('body'); creates a column/section called body that will except text...
 then run php artisan migrate
+
+
+dummy data / seeder 
+to enter in dummy data to db:
+in terminal: php artisan tinker
+enter in path of ur db model then factory() then chain the number of times you want it entered then create
+example: App\Models\Post::factory()->times(200)->create(['user_id' => 1]);
