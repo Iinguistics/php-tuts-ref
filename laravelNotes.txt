@@ -3,6 +3,21 @@ to connect SQL db in laravel & using xampp make sure this extension is in your p
 -to make a new controller. in terminal you can run php aritisan make:controller nameOfMyController
  automatically get created in your http/controllers directory
   if you want it in a subdirectory, php aritisan make:controller MyParentDirectory\\nameOfMyController
+bring in any dependencies in your view to access in the blade view file...data/array to loop through & display on ui or any var.
+ $pizzas = [
+            ['type' => 'Pepi zah', 'base' => 'cheese & pepporoni'],
+            ['type' => 'The zah', 'base' => 'cheese & pepporoni, bacon, sausage, black olive'],
+            ['type' => 'Olaha zah', 'base' => 'cheese, ham, bacon & pinapple'],
+        ];
+
+        $drinks = [
+            ['type' => 'Coke', 'price' => 2.99 ],
+            ['type' => 'Sprite', 'price' => 2.99 ],
+            ['type' => 'Root Beer', 'price' => 2.99 ],
+            ['type' => 'Smart Water', 'price' => 3.99 ],
+        ];
+return view('menu' , ['drinks' => $drinks, 'pizzas' => $pizzas ]);
+
 
 Define your routes in web.php  Route::get  then bring in your controller, & the function name.
 to import your controller in the web.php file:  use path\of\controller\NameOfControllerFile
@@ -32,3 +47,4 @@ to enter in dummy data to db:
 in terminal: php artisan tinker
 enter in path of ur db model then factory() then chain the number of times you want it entered then create
 example: App\Models\Post::factory()->times(200)->create(['user_id' => 1]);
+
