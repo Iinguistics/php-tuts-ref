@@ -48,3 +48,7 @@ in terminal: php artisan tinker
 enter in path of ur db model then factory() then chain the number of times you want it entered then create
 example: App\Models\Post::factory()->times(200)->create(['user_id' => 1]);
 
+
+Once your db table is made you can interact with your data by making an eloquent model
+php artisan make:model Whatever you want to name it.if your table is called pizzas you can name ur model Pizza  capitalize the first Letter just like in mongodb.
+It will be created in your App/Models directory
