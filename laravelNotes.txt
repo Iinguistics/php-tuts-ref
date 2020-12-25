@@ -75,5 +75,5 @@ name is pizzas.index
 in your a tag in a view: href="{{ route('pizzas.index') }}"
 route method then enter in the name.
 if you have a id to enter as well, that is just a 2nd parameter
-a tag href="{{ route('pizzas.index'), $pizza->id }}"
-or in a form action ="{{ route('pizzas.index'), pizza->id }}"
+a tag href="{{ route('pizzas.index', $pizza->id) }}"
+or in a form action ="{{ route('pizzas.index', pizza->id) }}"
