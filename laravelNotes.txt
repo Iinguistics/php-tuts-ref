@@ -58,3 +58,12 @@ in you class write: protected $table = 'whatever_table_you_want';
 
 to add a column to your existing db make a migration file add_columnName_to_tableName
 add will represent the column the other files in ur migrations dir will be create_ect...
+
+
+for a boiler plate login/logout header with auth equppied you can use with vue || react ect..
+composer require laravel/ui
+php artisan ui vue --auth
+npm run dev && npm run dev
+
+will generate a login view, register, home view..& Auth::routes() in web.php, & a homecontroller
+
