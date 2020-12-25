@@ -67,3 +67,13 @@ npm run dev && npm run dev
 
 will generate a login view, register, home view..& Auth::routes() in web.php, & a homecontroller
 
+
+on named routes:
+in your web.php file:
+Route::get('/pizzas', [PizzaController::class, 'index' ])->name('pizzas.index')->middleware('auth');
+name is pizzas.index
+in your a tag in a view: href="{{ route('pizzas.index') }}"
+route method then enter in the name.
+if you have a id to enter as well, that is just a 2nd parameter
+a tag href="{{ route('pizzas.index'), $pizza->id }}"
+or in a form action ="{{ route('pizzas.index'), pizza->id }}"
