@@ -77,3 +77,6 @@ route method then enter in the name.
 if you have a id to enter as well, that is just a 2nd parameter
 a tag href="{{ route('pizzas.index', $pizza->id) }}"
 or in a form action ="{{ route('pizzas.index', pizza->id) }}"
+
+dd()  helper function which is used to dump a variable's contents to the browser and stop the further script execution. It stands for Dump and Die
+
