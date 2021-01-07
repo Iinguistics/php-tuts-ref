@@ -80,3 +80,15 @@ or in a form action ="{{ route('pizzas.index', pizza->id) }}"
 
 dd()  helper function which is used to dump a variable's contents to the browser and stop the further script execution. It stands for Dump and Die
 
+making an api call to a 3rd party route:
+use Illuminate\Support\Facades\Http;
+
+public function index(){
+
+        $response = Http::get('https://jsonplaceholder.typicode.com/posts')->json();
+       
+       return view('test', [
+           'data'=> $response
+       ]);
+   
+    }
