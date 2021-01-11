@@ -79,6 +79,7 @@ a tag href="{{ route('pizzas.index', $pizza->id) }}"
 or in a form action ="{{ route('pizzas.index', pizza->id) }}"
 
 dd()  helper function which is used to dump a variable's contents to the browser and stop the further script execution. It stands for Dump and Die
+print_r() prints human readable info about a variable
 
 making an api call to a 3rd party route:
 use Illuminate\Support\Facades\Http;
