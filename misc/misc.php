@@ -69,3 +69,48 @@ foreach($products as $item){
 </body>
 </head>
 </html>
+
+
+<?php 
+//inheritance, One class inherits properties & methods from another
+
+class User{
+    public $username;
+    private $email;
+
+    public function __construct($username, $email){
+        $this->username = $username;
+        $this->email = $email;
+    }
+
+    public function addFriend(){
+        return "$this->email added a new friend";
+    }
+
+    //getters
+    public function getEmail(){
+        return $this->email;
+    }
+}
+
+//child class AdminUser inherits from parent class User
+// if not specified in child class it will automatically get from parent class
+class AdminUser extends User{
+   public $level;
+
+   public function __construct($username, $email, $level){
+       $this->level = $level;
+
+       // get the construct method from the parent:
+       parent::__construct($username, $email);
+   }
+
+}
+
+
+$userOne = new User('James', 'jg@gmail.com');
+$userTwo = new AdminUser('James', 'jg@gmail.com');
+
+echo $userTwo->getEmail();
+echo $userTwo->level;
+?>

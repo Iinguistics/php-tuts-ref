@@ -100,3 +100,4 @@ call with headers:
         'x-rapidapi-host' => 'realtor.p.rapidapi.com'
         ])->get('https://realtor.p.rapidapi.com/properties/v2/list-for-rent?city=' . $city .'%20City&state_code=' . $state . '&limit=200&offset=0&sort=relevance')->json();
 
+
