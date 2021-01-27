@@ -101,3 +101,15 @@ call with headers:
         ])->get('https://realtor.p.rapidapi.com/properties/v2/list-for-rent?city=' . $city .'%20City&state_code=' . $state . '&limit=200&offset=0&sort=relevance')->json();
 
 
+// HTTP authentication example:
+<?php
+if (!isset($_SERVER['PHP_AUTH_USER'])) {
+    header('WWW-Authenticate: Basic realm="My Realm"');
+    header('HTTP/1.0 401 Unauthorized');
+    echo 'Text to send if user hits Cancel button';
+    exit;
+} else {
+    echo "<p>Hello {$_SERVER['PHP_AUTH_USER']}.</p>";
+    echo "<p>You entered {$_SERVER['PHP_AUTH_PW']} as your password.</p>";
+}
+?>
